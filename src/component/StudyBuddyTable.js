@@ -94,7 +94,7 @@ class StudyBuddyTable extends Component {
       for(var i = 0; i < this.state.tableData.length; i++) {
         var obj = this.state.tableData[i];
         if (obj.user_id !== this.profile.user.user_id) {
-          arr.push(obj.user_id)
+          arr.push(obj.post_id)
         }
       }
       console.log(arr);

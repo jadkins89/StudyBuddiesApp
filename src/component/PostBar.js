@@ -47,7 +47,7 @@ class PostBar extends Component {
         location: this.state.location.label,
         note: this.state.note
       };
-      barAxios.post('https://study-buddies-api.herokuapp.com' + `/data/addpost`, post)
+      barAxios.post(`https://study-buddies-api.herokuapp.com/data/addpost`, post)
         .then(res => {
           this.props.PersonalQuery() })
         .catch(error => {
