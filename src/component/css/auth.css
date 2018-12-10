@@ -1,0 +1,101 @@
+@media all and (min-width: 480px) {
+  .SignUp {
+    padding: 40px 0;
+  }
+
+  .SignUp_Banner {
+    color: white;
+  }
+
+  .SignUp form {
+    margin: 0 auto;
+    color: black;
+    max-width: 320px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 16px;
+    opacity: 0.99;
+  }
+
+  .SignUp .basic-multi-select {
+    color: black;
+  }
+
+  .SignUp .Submit {
+    margin: 20px 0;
+    background-color: #3c9bc5;
+    opacity: 1;
+  }
+
+  .SignUp .email_error{
+  	color: #cc0000;
+  	opacity: 1;
+  	font-size: 15px;
+  }
+
+  .LoginBody {
+    margin-top: 20px;
+    padding: 40px;
+    color: white;
+    text-align: center;
+  }
+
+  .Login .login_error{
+    color: #cc0000;
+    opacity: 1;
+    font-size: 13px;
+  }
+
+
+  .loginBtn.disabled, .loginBtn[disabled], fieldset[disabled] .loginBtn {
+    opacity: 0.5;
+    background-color: gray;
+  }
+
+  .SignUp .Submit.disabled, .SignUp .Submit[disabled], fieldset[disabled] .SignUp .Submit {
+    opacity: 0.5;
+    background-color: gray;
+  }
+
+  .loginBtn {
+    color: white;
+    background-color: #3c9bc5;
+    opacity: 1;
+  }
+
+  .Login {
+    padding: 120px 0;
+  }
+
+
+  /* Full page responsive background image */
+  img.bg {
+    /* Set rules to fill background */
+    min-height: 100%;
+    min-width: 1024px;
+
+    /* Set up proportionate scaling */
+    width: 100%;
+    height: auto;
+
+    /* Set up positioning */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  .Login form {
+    margin: 0 auto;
+    color: black;
+    max-width: 320px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 16px;
+    opacity: 0.99;
+  }
+
+  .SignUp_Banner{
+    padding: 10px;
+    text-align: center;
+  }
+
+}

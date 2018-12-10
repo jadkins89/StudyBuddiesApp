@@ -1,0 +1,74 @@
+/* Full page responsive background image */
+img.bg {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+  background-size: cover;
+
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.table {
+  border-radius: 15px;
+  border-color: transparent;
+}
+
+.addPost .basic-multi-select {
+  width: 128px;
+  color: black;
+  opacity: 1;
+}
+
+.addPost .inlineSelect {
+  display: inline-block;
+}
+
+.addPost {
+  color: black;
+  border-radius: 5px;
+  background-color: white;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+
+.addPost #locationField {
+  width: 100px;
+}
+
+.addPost .submitForm {
+  display: inline-block;
+}
+
+.addPost #noteField {
+  width: 400px;
+  margin-right: 20px;
+  display: inline-block;
+}
+
+.addPost #courseTitle {
+  margin: 0px 20px 0px 6px;
+}
+
+.addPost #locationTitle {
+  margin: 0px 20px;
+}
+
+.addPost .submitBtnForm {
+  display: inline-block;
+}
+
+.addPost .submitBtnForm #noteTitle {
+  margin: 0px 20px;
+}
+
+.addPost .submitBtnForm .subBtn {
+  width: 100px;
+}
