@@ -1,10 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+import  { Redirect } from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import Typography from '@material-ui/core/Typography';
+import AuthService from './AuthService';
 import './css/resources.css'
-
 
 const styles = theme => ({
   root: {
@@ -102,50 +102,57 @@ const images = [
   },
 ];
 
-function ButtonBases(props) {
-  const { classes } = props;
-  const imgSrc = "http://getwallpapers.com/wallpaper/full/4/f/c/1043875-top-beach-sunrise-wallpaper-1920x1200-for-iphone-7.jpg";
-  return (
-    <div className={classes.root}>
-    <img src={imgSrc} className="bg" alt="Mountain Lake "/>
-      <h1 className = "Header"> Still stuck? We recommend looking to these resources to get ahead. </h1>
-      {images.map(image => (
-        <ButtonBase
-          focusRipple
-          key={image.title}
-          className={classes.image}
-          focusVisibleClassName={classes.focusVisible}
-          style={{
-            width: image.width,
-          }}
-        >
-          <span className={classes.imageSrc}
-            style={{
-              backgroundImage: `url(${image.url})`
-            }}
-          />
-          <span className={classes.imageBackdrop} />
-          <a href = {image.link} target="_blank" rel="noopener noreferrer">
-            <span className={classes.imageButton}>
-              <Typography
-                component="span"
-                variant="subtitle1"
-                color="inherit"
-                className={classes.imageTitle}
-              >
-                {image.title}
-                <span className={classes.imageMarked} />
-              </Typography>
-            </span>
-          </a>
-        </ButtonBase>
-      ))}
-    </div>
-  );
-}
+class ButtonBases extends Component {
+  constructor(props) {
+    super(props);
 
-ButtonBases.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
+    this.Auth = new AuthService();
+  }
+  render () {
+    const { classes } = this.props;
+    const imgSrc = "http://getwallpapers.com/wallpaper/full/4/f/c/1043875-top-beach-sunrise-wallpaper-1920x1200-for-iphone-7.jpg";
+
+    if (!this.Auth.loggedIn()) {
+      return <Redirect to='/login' />
+    }
+    return (
+      <div className={classes.root}>
+      <img src={imgSrc} className="bg" alt="Mountain Lake "/>
+        <h1 className = "Header"> Still stuck? We recommend looking to these resources to get ahead. </h1>
+        {images.map(image => (
+          <ButtonBase
+            focusRipple
+            key={image.title}
+            className={classes.image}
+            focusVisibleClassName={classes.focusVisible}
+            style={{
+              width: image.width,
+            }}
+          >
+            <span className={classes.imageSrc}
+              style={{
+                backgroundImage: `url(${image.url})`
+              }}
+            />
+            <span className={classes.imageBackdrop} />
+            <a href = {image.link} target="_blank" rel="noopener noreferrer">
+              <span className={classes.imageButton}>
+                <Typography
+                  component="span"
+                  variant="subtitle1"
+                  color="inherit"
+                  className={classes.imageTitle}
+                >
+                  {image.title}
+                  <span className={classes.imageMarked} />
+                </Typography>
+              </span>
+            </a>
+          </ButtonBase>
+        ))}
+      </div>
+    )
+  }
+}
 
 export default withStyles(styles)(ButtonBases);

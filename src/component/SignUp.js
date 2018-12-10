@@ -59,7 +59,7 @@ class SignUp extends React.Component {
       courses: parsedCourses
     };
 
-    axios.post('https://study-buddies-api.herokuapp.com' + `/auth/signup`, user)
+    axios.post(`https://study-buddies-api.herokuapp.com/auth/signup`, user)
       .then(res => {
         console.log(res);
         console.log(res.data);

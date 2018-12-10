@@ -1,4 +1,5 @@
 import React from 'react';
+import  { Redirect } from 'react-router-dom';
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 
 import AuthService from './AuthService';
@@ -16,12 +17,6 @@ class Login extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.Auth = new AuthService();
-  }
-
-  componentDidMount() {
-    if(this.Auth.loggedIn()) {
-      this.props.history.replace('/home');
-    }
   }
 
   validateForm() {
@@ -51,6 +46,10 @@ class Login extends React.Component {
 
   render() {
     const imgSrc = "https://images.pexels.com/photos/67517/pexels-photo-67517.jpeg?cs=srgb&dl=road-landscape-mountains-67517.jpg&fm=jpg";
+
+    if(this.Auth.loggedIn()) {
+      return <Redirect to='/home' />
+    }
     return (
       <div className="Login">
         <img src={imgSrc} className="bg" alt="Mountains with road"/>
