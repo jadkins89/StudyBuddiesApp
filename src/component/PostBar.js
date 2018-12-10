@@ -47,7 +47,7 @@ class PostBar extends Component {
         location: this.state.location.label,
         note: this.state.note
       };
-      barAxios.post((baseUrl = process.env.baseURL || `http://localhost:8000`)+ `/data/addpost`, post)
+      barAxios.post((process.env.NODE_ENV || `http://localhost:8000`) + `/data/addpost`, post)
         .then(res => {
           this.props.PersonalQuery() })
         .catch(error => {

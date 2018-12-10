@@ -10,7 +10,7 @@ var dataAxios = axios.create({
   crossDomain: true
 });
 
-var URL = (baseUrl = process.env.baseURL || `http://localhost:8000`)
+var URL = process.env.NODE_ENV || `http://localhost:8000`;
 
 class StudyBuddyTable extends Component {
     constructor(props) {
