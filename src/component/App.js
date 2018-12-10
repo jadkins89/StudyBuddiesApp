@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-//import SimpleStorage from "react-simple-storage";
 
 import AuthService from './AuthService';
 
@@ -10,7 +9,7 @@ import Error from './Error';
 import Login from './Login';
 import Home from './Home';
 import Landing from './Landing';
-import ResourcePage from './ResourcePage'; 
+import ResourcePage from './ResourcePage';
 
 class App extends Component {
   constructor(props) {

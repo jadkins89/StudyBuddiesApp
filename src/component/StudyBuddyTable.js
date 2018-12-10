@@ -10,7 +10,7 @@ var dataAxios = axios.create({
   crossDomain: true
 });
 
-var URL = process.env.NODE_ENV || `http://localhost:8000`;
+var URL = 'https://study-buddies-api.herokuapp.com'
 
 class StudyBuddyTable extends Component {
     constructor(props) {
