@@ -97,6 +97,7 @@ class StudyBuddyTable extends Component {
           arr.push(obj.user_id)
         }
       }
+      console.log(arr);
       return arr;
     }
 
