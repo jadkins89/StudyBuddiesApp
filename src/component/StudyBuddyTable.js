@@ -10,6 +10,8 @@ var dataAxios = axios.create({
   crossDomain: true
 });
 
+var URL = (baseUrl = process.env.baseURL || `http://localhost:8000`)
+
 class StudyBuddyTable extends Component {
     constructor(props) {
         super(props);
@@ -30,7 +32,7 @@ class StudyBuddyTable extends Component {
     }
 
     PersonalQuery = ()  => {
-      dataAxios.post(`http://localhost:8000/data`, this.profile.user.user_courses)
+      dataAxios.post(URL + `/data`, this.profile.user.user_courses)
         .then(res => this.setState({tableData: res.data}))
         .catch(error => {
           console.error(error);
@@ -38,7 +40,7 @@ class StudyBuddyTable extends Component {
     }
 
     HandleQuery = () => {
-      dataAxios.get(`http://localhost:8000/data`)
+      dataAxios.get(URL + `/data`)
         .then(res => this.setState({tableData: res.data }))
         .catch(error => {
           console.error(error);
@@ -79,7 +81,7 @@ class StudyBuddyTable extends Component {
     handleSubmit = event => {
       event.preventDefault();
       console.log(this.state.selected);
-      dataAxios.post(`http://localhost:8000/data/deletepost`, this.state.selected)
+      dataAxios.post(URL + `/data/deletepost`, this.state.selected)
         .then(res => {
           this.PersonalQuery()})
         .catch(error => {

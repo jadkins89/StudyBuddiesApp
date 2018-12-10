@@ -20,7 +20,7 @@ export default class AuthService {
           password: password
         };
 
-        return loginAxios.post(`http://localhost:8000/auth/login`, user)
+        return loginAxios.post((baseUrl = process.env.baseURL || `http://localhost:8000`) + `/auth/login`, user)
           .then(res => {
             this.setToken(res.data.token)
             return Promise.resolve(res);

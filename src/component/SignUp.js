@@ -59,7 +59,7 @@ class SignUp extends React.Component {
       courses: parsedCourses
     };
 
-    axios.post(`http://localhost:8000/auth/signup`, user)
+    axios.post((baseUrl = process.env.baseURL || `http://localhost:8000`) + `/auth/signup`, user)
       .then(res => {
         console.log(res);
         console.log(res.data);
