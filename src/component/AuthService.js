@@ -20,7 +20,7 @@ export default class AuthService {
           password: password
         };
 
-        return loginAxios.post('https://study-buddies-api.herokuapp.com' + `/auth/login`, user)
+        return loginAxios.post(`https://study-buddies-api.herokuapp.com/auth/login`, user)
           .then(res => {
             this.setToken(res.data.token)
             return Promise.resolve(res);
@@ -29,7 +29,7 @@ export default class AuthService {
 
     loggedIn() {
         // Checks if there is a saved token and it's still valid
-        const token = this.getToken() // GEtting token from localstorage
+        const token = this.getToken() // Getting token from localstorage
         return token && !this.isTokenExpired(token) // handwaiving here
     }
 
