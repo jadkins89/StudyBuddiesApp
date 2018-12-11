@@ -16,17 +16,11 @@ class Home extends Component {
 
   profile = JSON.parse(localStorage.getItem('profile'));
 
-  // componentDidMount() {
-  //   if (!this.Auth.loggedIn()) {
-  //       this.props.history.replace('/login')
-  //   }
-  // }
-
   render() {
     const imgSrc = "https://images.unsplash.com/photo-1506783323968-e8dad28ae1de?ixlib=rb-1.2.1&auto=format&fit=crop&w=2690&q=80";
 
     if (!this.Auth.loggedIn()) {
-    return <Redirect to='/login' />
+        return <Redirect to='/login' />
     }
     return (
         <div className="container">

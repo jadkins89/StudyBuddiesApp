@@ -1,0 +1,22 @@
+html {
+  font-size: 12px;
+}
+
+.btn {
+  color: white;
+  background-color: #3c9bc5;
+  border-color: #3c9bc5;
+  opacity: 1;
+}
+
+.btn:hover {
+  color: #fff;
+  background-color: #00BFFF;
+  border-color: #00BFFF;
+}
+
+.btn.disabled, .btn[disabled], fieldset[disabled] .btn {
+  opacity: 0.5;
+  background-color: gray;
+  border-color: gray;
+}

@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import AuthService from './AuthService';
+import './css/general.css';
 
 import SignUp from './SignUp';
 import TopNav from './TopNav';
+import BotNav from './BotNav';
 import Error from './Error';
 import Login from './Login';
 import Home from './Home';
@@ -54,7 +56,7 @@ class App extends Component {
 	          <Route exact path="/" component={Landing} />
             <Route component={Error} />
           </Switch>
-
+		      <BotNav/>
         </div>
       </BrowserRouter>
     );

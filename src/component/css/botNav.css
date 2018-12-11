@@ -1,0 +1,44 @@
+.example{
+	position:fixed;
+	left:0px;
+	bottom:0px;
+	right:0px;
+	background-color: #222;
+	width:100%;
+	color:white;
+	border-radius: 6px;
+}
+
+.navRow .rowLink{
+	color: #9d9d9d;
+}
+.navRow .rowLink:hover{
+	text-decoration: none;
+	color: white;
+}
+.navRow .rowLink:link {
+  text-decoration: none;
+}
+
+.navRow .rowLink:visited {
+  text-decoration: none;
+}
+
+.navRow .rowLink:active {
+  text-decoration: none;
+}
+
+.navRow {
+  padding: 8px;
+  justify-content: center;
+}
+
+.navRow .copyRight {
+  float:left;
+  vertical-align: bottom;
+}
+
+.navItem {
+  float:right;
+  margin-left: 30px;
+}

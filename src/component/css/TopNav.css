@@ -4,3 +4,7 @@ a.gitLink.navbar-link.navbar-right {
     line-height: 20px;
     color: #03A9F4;
 }
+a.gitLink.navbar-link.navbar-right:hover{
+	text-decoration: none;
+	color: white;
+}
