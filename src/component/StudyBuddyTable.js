@@ -29,6 +29,10 @@ class StudyBuddyTable extends Component {
 
     componentDidMount() {
       this.PersonalQuery();
+      this.interval = setInterval(() => this.PersonalQuery(), 1000);
+    }
+    componentWillUnmount() {
+      clearInterval(this.interval);
     }
 
     PersonalQuery = ()  => {
