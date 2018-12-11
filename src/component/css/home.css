@@ -72,3 +72,7 @@ img.bg {
 .addPost .submitBtnForm .subBtn {
   width: 100px;
 }
+
+.delBtn {
+  margin-bottom: 40px;
+}

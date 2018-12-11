@@ -20,3 +20,9 @@ html {
   background-color: gray;
   border-color: gray;
 }
+
+.btn:active, .btn.active,
+.show > .btn-.dropdown-toggle {
+  background-color: #3c9bc5;
+  border-color: #3c9bc5;
+}

@@ -97,7 +97,6 @@ class StudyBuddyTable extends Component {
           arr.push(obj.post_id)
         }
       }
-      console.log(arr);
       return arr;
     }
 
