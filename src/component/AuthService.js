@@ -59,14 +59,14 @@ export default class AuthService {
 
     logout() {
         // Clear user token and profile data from localStorage
-        var profile = JSON.parse(localStorage.getItem('profile'));
+        //var profile = JSON.parse(localStorage.getItem('profile'));
         localStorage.removeItem('id_token')
         localStorage.removeItem('profile')
-        loginAxios.post(`https://study-buddies-api.herokuapp.com/data/deleteall`, profile.user)
-          .then(res => console.log(res))
-          .catch(error => {
-            console.error(error);
-          });
+        // loginAxios.post(`https://study-buddies-api.herokuapp.com/data/deleteall`, profile.user)
+        //   .then(res => console.log(res))
+        //   .catch(error => {
+        //     console.error(error);
+        //   });
     }
 
     getProfile() {
