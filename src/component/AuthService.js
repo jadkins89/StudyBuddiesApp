@@ -62,7 +62,7 @@ export default class AuthService {
         var profile = JSON.parse(localStorage.getItem('profile'));
         localStorage.removeItem('id_token')
         localStorage.removeItem('profile')
-        loginAxios.post(`https://study-buddies-api.herokuapp.com/deleteall`, profile.user)
+        loginAxios.post(`https://study-buddies-api.herokuapp.com/data/deleteall`, profile.user)
           .then()
           .catch(error => {
             console.error(error);

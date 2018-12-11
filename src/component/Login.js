@@ -20,7 +20,7 @@ class Login extends React.Component {
   }
 
   validateForm() {
-    return this.state.email.length > 0;
+    return this.state.email.length > 0 && this.state.password.length >= 6;
   }
 
   handleChange = event => {
