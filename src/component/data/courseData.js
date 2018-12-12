@@ -7,5 +7,9 @@ export const courseData = [
   { value: '2820', label: 'CSCI 2820' },
   { value: '3002', label: 'CSCI 3002' },
   { value: '3104', label: 'CSCI 3104' },
-  { value: '3155', label: 'CSCI 3155' }
+  { value: '3155', label: 'CSCI 3155' },
+  { value: '3202', label: 'CSCI 3202' },
+  { value: '3287', label: 'CSCI 3287' },
+  { value: '3308', label: 'CSCI 3308' },
+  { value: '3753', label: 'CSCI 3753' }
 ];

@@ -23,11 +23,14 @@ class StudyBuddyTable extends Component {
         this.handleOnSelect = this.handleOnSelect.bind(this);
         this.handleOnSelectAll = this.handleOnSelectAll.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+
+        this.Auth = new AuthService();
     }
 
     profile = JSON.parse(localStorage.getItem('profile'));
 
     componentDidMount() {
+
       this.PersonalQuery();
       this.interval = setInterval(() => this.PersonalQuery(), 1000);
     }
