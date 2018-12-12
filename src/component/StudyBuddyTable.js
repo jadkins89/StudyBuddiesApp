@@ -24,7 +24,6 @@ class StudyBuddyTable extends Component {
         this.handleOnSelectAll = this.handleOnSelectAll.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
 
-        this.Auth = new AuthService();
     }
 
     profile = JSON.parse(localStorage.getItem('profile'));
