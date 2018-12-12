@@ -19,7 +19,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "heroku-postbuild": "npm install --only=dev --no-shrinkwrap && npm run build",
+    "build": "react-scripts build",
     "test": "mocha",
     "eject": "react-scripts eject"
   },
