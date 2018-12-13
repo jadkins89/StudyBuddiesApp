@@ -20,7 +20,6 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "mocha",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -31,12 +30,5 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ],
-  "devDependencies": {
-    "chai": "^4.2.0",
-    "css-loader": "^1.0.1",
-    "mocha": "^5.2.0",
-    "object-assign": "^4.1.1",
-    "scheduler": "^0.11.2"
-  }
+  ]
 }
